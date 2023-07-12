@@ -60,7 +60,7 @@ const { ethers } = require("ethers");
 */
 
 /// 📡 What chain are your contracts deployed to?
-const targetNetwork = NETWORKS.localhost; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
+const targetNetwork = NETWORKS.sepolia; // <------- select your target frontend network (localhost, rinkeby, xdai, mainnet)
 
 // 😬 Sorry for all the console logging
 const DEBUG = true;
@@ -474,7 +474,7 @@ function App(props) {
     });
   };
 
-  /*
+  
   const riggedRoll = async () => {
     tx(writeContracts.RiggedRoll.riggedRoll({ gasLimit: 500000 }), update => {
       console.log("TX UPDATE", update);
@@ -503,7 +503,7 @@ function App(props) {
       setDiceRolled(false);
     }
   });
-*/
+
 
   const filter = readContracts.DiceGame?.filters.Roll(address, null);
 
